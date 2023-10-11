@@ -95,7 +95,7 @@ footer {
 #a-propos {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 #a-propos > h1 {
@@ -126,6 +126,7 @@ footer {
   cursor: pointer;
   display: none;
 }
+
 /* DEBUT SOCIAL ICONS  */
 .social-icon {
   transform: translateY(30px);
@@ -146,6 +147,8 @@ footer {
 }
 .social-icons {
   display: flex;
+  text-decoration: none;
+  color: black;
 }
 
 .social-icon:hover {
@@ -161,6 +164,8 @@ footer {
 }
 
 .social-icon--github {
+  text-decoration: none;
+  color: black;
   background: #fff;
   background: linear-gradient(tint(#4284c0, 5%), shade(#4284c0, 5%));
   border-bottom: 1px solid shade(#4284c0, 20%);
@@ -180,6 +185,7 @@ footer {
   border-top-color: black;
 }
 .social-icon--discord {
+  color: #e6e3e3;
   background: #7289da;
   background: linear-gradient(tint(#7289da, 5%), shade(#7289da, 5%));
   border-bottom: 1px solid shade(#7289da, 20%);
