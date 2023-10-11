@@ -72,6 +72,51 @@ body {
   display: none;
 }
 
+#check2 {
+  position: relative;
+  left: 50%;
+  top: -100px;
+}
+
+div#container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 1.55fr 7fr 7fr 3fr;
+}
+
+#accueil,
+#a-propos,
+#experience,
+footer {
+  margin: 5px;
+  border: solid 2px;
+}
+
+#a-propos {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#a-propos > h1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#a-propos > p {
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(-100px);
+}
+
+footer {
+  margin: 0;
+  background: #36383f82;
+  display: flex;
+  justify-content: space-around;
+}
+
 .icons {
   position: absolute;
   right: 5%;
@@ -81,6 +126,113 @@ body {
   cursor: pointer;
   display: none;
 }
+/* DEBUT SOCIAL ICONS  */
+.social-icon {
+  transform: translateY(30px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 2.5rem;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.15s ease;
+}
+.social-icons {
+  display: flex;
+}
+
+.social-icon:hover {
+  color: #fff;
+}
+.social-icon:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, -150%);
+}
+.social-icon:active {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+.social-icon--github {
+  background: #fff;
+  background: linear-gradient(tint(#4284c0, 5%), shade(#4284c0, 5%));
+  border-bottom: 1px solid shade(#4284c0, 20%);
+  color: tint(#4284c0, 50%);
+}
+.social-icon--github:hover {
+  background: black;
+  color: tint(#4284c0, 80%);
+  text-shadow: 0px 1px 0px shade(#4284c0, 20%);
+}
+.social-icon--github .tooltip {
+  background: black;
+  background: linear-gradient(tint(black, 15%), black);
+  color: tint(black, 80%);
+}
+.social-icon--github .tooltip:after {
+  border-top-color: black;
+}
+.social-icon--discord {
+  background: #7289da;
+  background: linear-gradient(tint(#7289da, 5%), shade(#7289da, 5%));
+  border-bottom: 1px solid shade(#7289da, 20%);
+  color: tint(#7289da, 50%);
+}
+.social-icon--discord:hover {
+  color: tint(#7289da, 80%);
+  text-shadow: 0px 1px 0px shade(#7289da, 20%);
+}
+.social-icon--discord .tooltip {
+  background: #7289da;
+  background: linear-gradient(tint(#7289da, 15%), #7289da);
+  color: tint(#7289da, 80%);
+}
+.social-icon--discord .tooltip:after {
+  border-top-color: #7289da;
+}
+.social-icon i {
+  position: relative;
+  top: 1px;
+}
+/* Tooltips */
+.tooltip {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0.8rem 1rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: translate(-50%, -100%);
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.tooltip:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  content: "";
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+/* FIN SOCIAL ICONS */
 
 /* LE RESPONSIVE  */
 
